@@ -48,16 +48,28 @@ round by round.
 capstone-project/
 ├── README.md              project overview (this file)
 ├── requirements.txt       Python dependencies
+├── datasheet.md           dataset documentation (Module 21)
+├── model-card.md          optimiser documentation (Module 21)
 ├── src/                   query-generation code
 ├── data/
-│   ├── initial/           original per-function datasets (.npy)
+│   ├── initial/           original datasets, one subfolder per function (.npy)
 │   └── weekly/            per-round query inputs and outputs
 ├── docs/
 │   ├── methodology.md     modelling approach and reasoning
 │   └── progress-log.md    week-by-week record of changes
-├── notebooks/             exploratory analysis
+├── notebooks/             exploratory analysis, one notebook per function
 └── results/               plots and running best-so-far
 ```
+
+## Transparency documentation
+
+Two governance documents accompany the project, following the Module 21
+(transparency and interpretability) material:
+
+- [`datasheet.md`](datasheet.md) — how the dataset was created, what it contains,
+  and its coverage limitations.
+- [`model-card.md`](model-card.md) — the optimiser's design, intended use,
+  assumptions and limitations.
 
 ## Running it
 
