@@ -39,6 +39,26 @@ Stored as NumPy arrays under `data/initial/function_n/`:
 
 > Fill in the final point counts once the rounds are complete.
 
+## How the data was collected
+
+The initial points were supplied by the programme as `.npy` files. Every later
+point was obtained by submitting one input per function per round through the
+portal and recording the returned value, over the span of the capstone's weekly
+rounds.
+
+The query strategy changed deliberately as evidence built up, and the change is
+itself part of the record:
+
+- **Early rounds** were broad and exploration-weighted, maximising an acquisition
+  function over the full domain to get a feel for each surface.
+- **Middle rounds** narrowed toward the best point found so far, with the
+  exploration weight reduced as confidence grew.
+- **Later rounds** refined locally, moving in small steps around the incumbent.
+
+Because every query from the second round on was chosen by a model fitted to all
+preceding points, the observations are sequentially dependent rather than drawn
+independently — each query reflects what the model believed at the time.
+
 ## Format and preprocessing
 
 - All inputs are already normalised to the unit hypercube `[0, 1]^D`.
@@ -71,8 +91,18 @@ Not suited to: reconstructing the full response surface across the whole cube
 (the data is too clustered), or anything assuming a discrete or combinatorial
 input space.
 
-## Maintenance
+## Distribution, terms and maintenance
 
-Held in this repository, with history tracked through Git. Observed results and
-pending queries should stay clearly distinguished so the two are never confused
-when refitting.
+**Availability.** Held in this project's public GitHub repository, alongside the
+code and documentation that produced it.
+
+**Terms of use.** Shared publicly for academic review and peer feedback as part
+of the capstone. The query history, code and documentation are my own work and
+may be reused for educational purposes with attribution. The initial seed data
+and the objective functions were provided by the programme and remain its
+property; their redistribution is governed by the programme's terms, not mine.
+
+**Maintenance.** Maintained by the author through the repository, with history
+tracked in Git. Observed results and pending queries are kept clearly
+distinguished so the two are never confused when the dataset is rebuilt. After
+the final round the dataset is frozen.
