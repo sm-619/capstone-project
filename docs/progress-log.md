@@ -1,7 +1,9 @@
 # Progress log
 
 A round-by-round record of how the strategy changed and why. The intent is that
-a reader can trace each shift back to the evidence that prompted it.
+a reader can trace each shift back to the evidence that prompted it. This is the
+home for the weekly reflections — what changed each round, whether the query was
+exploration or exploitation, what the result showed, and the plan for next time.
 
 ## Early rounds — groundwork
 

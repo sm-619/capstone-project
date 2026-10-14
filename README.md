@@ -50,10 +50,14 @@ capstone-project/
 ├── requirements.txt       Python dependencies
 ├── datasheet.md           dataset documentation (Module 21)
 ├── model-card.md          optimiser documentation (Module 21)
-├── src/                   query-generation code
+├── src/
+│   ├── optimiser.py       query-generation
+│   ├── build_dataset.py   consolidates raw data into data/data.csv
+│   └── run_all.py         reproduce the full pipeline
 ├── data/
 │   ├── initial/           original datasets, one subfolder per function (.npy)
-│   └── weekly/            per-round query inputs and outputs
+│   ├── weekly/            per-round query inputs and outputs
+│   └── data.csv           consolidated long-format table (generated)
 ├── docs/
 │   ├── methodology.md     modelling approach and reasoning
 │   └── progress-log.md    week-by-week record of changes
@@ -75,9 +79,12 @@ Two governance documents accompany the project, following the Module 21
 
 ```bash
 pip install -r requirements.txt
-python src/optimiser.py <function_number>
+python src/build_dataset.py            # build data/data.csv from the raw data
+python src/optimiser.py <function_number>   # propose the next query
 ```
 
-> **Note.** `src/optimiser.py` is currently a placeholder stub describing the
-> expected interface. Replace it with the working optimiser, and populate
+Or run the whole pipeline end to end with `python src/run_all.py`.
+
+> **Note.** The scripts in `src/` are currently placeholder stubs describing the
+> intended interface. Replace them with the working code, and populate
 > `data/initial/` and `data/weekly/` with the actual datasets.

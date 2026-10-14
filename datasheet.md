@@ -18,27 +18,26 @@ the author's own.
 ## What it contains
 
 Paired coordinate vectors and scalar outputs for eight functions of increasing
-dimensionality:
+dimensionality. Each function starts with a set of initial observations and
+grows by one query per round:
 
-| Function | Dimensions |
-|----------|------------|
-| 1 | 2 |
-| 2 | 2 |
-| 3 | 3 |
-| 4 | 4 |
-| 5 | 4 |
-| 6 | 5 |
-| 7 | 6 |
-| 8 | 8 |
+| Function | Dimensions | Initial points | Final points |
+|----------|------------|----------------|--------------|
+| 1 | 2 | 10 | — |
+| 2 | 2 | 10 | — |
+| 3 | 3 | 15 | — |
+| 4 | 4 | 30 | — |
+| 5 | 4 | 20 | — |
+| 6 | 5 | 20 | — |
+| 7 | 6 | 30 | — |
+| 8 | 8 | 40 | — |
 
-Each function has an initial set of observations, grown by one query per round.
 Stored as NumPy arrays under `data/initial/function_n/`:
 
 - `initial_inputs.npy` — `(N, D)` float array of coordinates in `[0, 1]`
 - `initial_outputs.npy` — `(N,)` float array of scalar responses
 
-> Fill in the actual observation counts per function once the real arrays are in
-> place.
+> Fill in the final point counts once the rounds are complete.
 
 ## Format and preprocessing
 

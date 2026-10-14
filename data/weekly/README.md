@@ -1,13 +1,14 @@
 # Weekly queries and responses
 
 The query submitted for each function each round, and the scalar returned by the
-portal.
+portal. Kept as both plain text and JSON so the record is easy to read by eye
+and easy to parse in code:
 
-Suggested layout (replace with the real records):
+- `inputs.txt` / `inputs.json` — the inputs submitted each round, per function
+- `outputs.txt` / `outputs.json` — the values returned for them
 
-- `week<N>_inputs.txt` — the query submitted that round, per function
-- `week<N>_outputs.txt` — the value returned for it
+These, together with the per-function initial arrays under `data/initial/`, are
+the source rows that `src/build_dataset.py` consolidates into `data/data.csv`.
 
-To keep the record honest, mark clearly which rows are confirmed observations
-and which are queries still awaiting a response, so the two are never confused
-when refitting the surrogate.
+Keep confirmed outputs clearly separate from queries still awaiting a response,
+so the two are never mixed when the dataset is rebuilt.
