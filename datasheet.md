@@ -19,9 +19,7 @@ the author's own.
 
 Paired coordinate vectors and scalar outputs for eight functions of increasing
 dimensionality. Each function starts with a set of initial observations and
-grows by one query per round:
-
-Each function gained 8 queried points (one per round across the recorded rounds):
+gained 8 queried points over the recorded rounds, one per round:
 
 | Function | Dimensions | Initial points | Final points |
 |----------|------------|----------------|--------------|
@@ -34,10 +32,10 @@ Each function gained 8 queried points (one per round across the recorded rounds)
 | 7 | 6 | 30 | 38 |
 | 8 | 8 | 40 | 48 |
 
-Stored as NumPy arrays under `data/initial/function_n/`:
-
-- `initial_inputs.npy` — `(N, D)` float array of coordinates in `[0, 1]`
-- `initial_outputs.npy` — `(N,)` float array of scalar responses
+The initial observations were provided as paired NumPy arrays per function —
+`initial_inputs.npy`, an `(N, D)` float array of coordinates in `[0, 1]`, and
+`initial_outputs.npy`, an `(N,)` float array of scalar responses — with the
+queried points and their returned values recorded alongside them each round.
 
 ## How the data was collected
 
@@ -93,8 +91,8 @@ input space.
 
 ## Distribution, terms and maintenance
 
-**Availability.** Held in this project's public GitHub repository, alongside the
-code and documentation that produced it.
+**Availability.** Held in this project's public GitHub repository as part of the
+capstone's documentation.
 
 **Terms of use.** Shared publicly for academic review and peer feedback as part
 of the capstone. The query history, code and documentation are my own work and
