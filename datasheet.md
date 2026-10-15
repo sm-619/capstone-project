@@ -21,23 +21,23 @@ Paired coordinate vectors and scalar outputs for eight functions of increasing
 dimensionality. Each function starts with a set of initial observations and
 grows by one query per round:
 
+Each function gained 8 queried points (one per round across the recorded rounds):
+
 | Function | Dimensions | Initial points | Final points |
 |----------|------------|----------------|--------------|
-| 1 | 2 | 10 | — |
-| 2 | 2 | 10 | — |
-| 3 | 3 | 15 | — |
-| 4 | 4 | 30 | — |
-| 5 | 4 | 20 | — |
-| 6 | 5 | 20 | — |
-| 7 | 6 | 30 | — |
-| 8 | 8 | 40 | — |
+| 1 | 2 | 10 | 18 |
+| 2 | 2 | 10 | 18 |
+| 3 | 3 | 15 | 23 |
+| 4 | 4 | 30 | 38 |
+| 5 | 4 | 20 | 28 |
+| 6 | 5 | 20 | 28 |
+| 7 | 6 | 30 | 38 |
+| 8 | 8 | 40 | 48 |
 
 Stored as NumPy arrays under `data/initial/function_n/`:
 
 - `initial_inputs.npy` — `(N, D)` float array of coordinates in `[0, 1]`
 - `initial_outputs.npy` — `(N,)` float array of scalar responses
-
-> Fill in the final point counts once the rounds are complete.
 
 ## How the data was collected
 
