@@ -62,22 +62,34 @@ costly simulations.
 - **Predicted vs actual**, logged each round, so optimism is visible rather than
   inferred.
 
-> Fill in your own figures from the actual runs. Add a sentence after the table
-> noting which functions improved steadily, which moved in one or two jumps, and
-> any that have not beaten their provided data, so the table is not read as
-> uniform progress. Note which dimensions turned out to drive each function —
-> that is the most interpretable output of the per-dimension length scales.
+All functions are maximisation problems, so the headline figure is the best
+(highest) value observed across all rounds, carried forward. The baseline here is
+the first recorded round rather than the provided initial data, and the gain is
+measured against that:
 
-| Function | Dim | Initial best | Current best | Gain |
-|----------|-----|--------------|--------------|------|
-| 1 | 2 | — | — | — |
-| 2 | 2 | — | — | — |
-| 3 | 3 | — | — | — |
-| 4 | 4 | — | — | — |
-| 5 | 4 | — | — | — |
-| 6 | 5 | — | — | — |
-| 7 | 6 | — | — | — |
-| 8 | 8 | — | — | — |
+| Function | Dim | First round | Best-so-far | Week hit | Gain vs first round |
+|----------|-----|-------------|-------------|----------|---------------------|
+| 1 | 2 | 1.03e-46 | 7.72e-16 | W3 | ≈ +7.7e-16 (noise around zero) |
+| 2 | 2 | 0.395806 | 0.395806 | W2 | 0 (peaked first round) |
+| 3 | 3 | −0.100414 | −0.033408 | W4 | +0.067007 |
+| 4 | 4 | −14.601366 | −10.069644 | W5 | +4.531721 |
+| 5 | 4 | 18.300789 | 258.366405 | W5 | +240.065616 |
+| 6 | 5 | −1.236424 | −0.905293 | W5 | +0.331132 |
+| 7 | 6 | 0.562759 | 1.364970 | W7 | +0.802211 |
+| 8 | 8 | 7.005233 | 8.606118 | W5 | +1.600885 |
+
+Progress was uneven across the eight functions. Function 5 was the clear success,
+climbing from about 18 to 258, though its individual rounds swung wildly (as low
+as 0.11), which is the signature of a sharp peak the search kept moving in and out
+of. Functions 4, 7 and 8 made solid single-jump gains (F7's best came in one
+round at W7 and stood well above every other query), and F3 and F6 improved
+modestly without ever settling. Function 2 is the honest counter-example: its best
+came in the first recorded round and was never beaten, with later queries drifting
+downward, a case where early exploration found the good region and subsequent
+moves did not improve on it. Function 1 never found a real signal at all, with
+every reading hovering around zero (best around 7.7e-16); its peak is evidently
+too narrow and sharp for the search to resolve, which matches the smoothness
+limitation noted below.
 
 ## Assumptions and limitations
 
