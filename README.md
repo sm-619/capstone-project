@@ -5,14 +5,14 @@ Learning and Artificial Intelligence.
 
 ## In plain terms (non-technical summary)
 
-This project tackles a black-box optimisation challenge: eight hidden functions,
-each taking a few numbers between 0 and 1 and returning a single score, with the
-goal of finding the inputs that score highest. Nothing about the functions is
-known in advance, and only one guess per function is allowed each round, so every
-guess has to count. The code builds a model of each function from the results
-gathered so far and uses it to choose the next guess, balancing careful
-refinement against trying new areas. Results varied: one function improved
-severalfold, several made steady gains, and one never moved.
+Think of eight locked dials. Each turns a handful of numbers between 0 and 1 into
+a single score, and there is no manual saying what any of them do. The job is to
+find the settings that give the highest score, with only one attempt per dial
+each round, so every attempt has to be chosen with care. The code learns from
+what each attempt returns, builds a rough picture of how each dial behaves, and
+uses that to decide where to try next, weighing safe tweaks against bolder moves.
+The outcomes were mixed: one dial improved severalfold, a few climbed steadily,
+and one never really responded.
 
 ## What the task is
 
