@@ -11,8 +11,8 @@ goal of finding the inputs that score highest. Nothing about the functions is
 known in advance, and only one guess per function is allowed each round, so every
 guess has to count. The code builds a model of each function from the results
 gathered so far and uses it to choose the next guess, balancing careful
-refinement against trying new areas. Results varied: one function improved more
-than tenfold, several made steady gains, and one never moved.
+refinement against trying new areas. Results varied: one function improved
+severalfold, several made steady gains, and one never moved.
 
 ## What the task is
 
