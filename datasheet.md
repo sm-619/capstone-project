@@ -18,24 +18,26 @@ the author's own.
 ## What it contains
 
 Paired coordinate vectors and scalar outputs for eight functions of increasing
-dimensionality. Each function starts with a set of initial observations and
-gained 8 queried points over the recorded rounds, one per round:
+dimensionality. Each function starts with a set of initial observations provided
+by the programme and gained 11 queried points over the recorded rounds, one per
+round:
 
 | Function | Dimensions | Initial points | Final points |
 |----------|------------|----------------|--------------|
-| 1 | 2 | 10 | 18 |
-| 2 | 2 | 10 | 18 |
-| 3 | 3 | 15 | 23 |
-| 4 | 4 | 30 | 38 |
-| 5 | 4 | 20 | 28 |
-| 6 | 5 | 20 | 28 |
-| 7 | 6 | 30 | 38 |
-| 8 | 8 | 40 | 48 |
+| 1 | 2 | 10 | 21 |
+| 2 | 2 | 10 | 21 |
+| 3 | 3 | 15 | 26 |
+| 4 | 4 | 30 | 41 |
+| 5 | 4 | 20 | 31 |
+| 6 | 5 | 20 | 31 |
+| 7 | 6 | 30 | 41 |
+| 8 | 8 | 40 | 51 |
 
-The initial observations were provided as paired NumPy arrays per function —
-`initial_inputs.npy`, an `(N, D)` float array of coordinates in `[0, 1]`, and
-`initial_outputs.npy`, an `(N,)` float array of scalar responses — with the
-queried points and their returned values recorded alongside them each round.
+The initial observations were provided by the programme as paired NumPy arrays
+per function (`initial_inputs.npy` of shape `(N, D)` and `initial_outputs.npy` of
+shape `(N,)`, all inputs in `[0, 1]`). The queried points and their returned
+values are included in this repository under `data/history/` as one CSV per
+function, with columns `x1 … xD` and `y`, one row per round.
 
 ## How the data was collected
 
