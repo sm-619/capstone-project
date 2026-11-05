@@ -70,21 +70,23 @@ baseline is the first recorded round, and the gain is measured against that:
 |----------|-----|---------|-------------|-----------|------|
 | 1 | 2 | 1.3e-79 | 7.72e-16 | 3 | ≈ 0 (noise near zero throughout) |
 | 2 | 2 | 0.416974 | 0.621969 | 10 | +0.204995 |
-| 3 | 3 | −0.112038 | −0.033408 | 4 | +0.078630 |
-| 4 | 4 | −22.108249 | −10.069644 | 5 | +12.038605 |
-| 5 | 4 | 64.443772 | 258.366405 | 5 | +193.922633 |
+| 3 | 3 | −0.112038 | −0.030400 | 12 | +0.081638 |
+| 4 | 4 | −22.108249 | −6.702153 | 12 | +15.406096 |
+| 5 | 4 | 64.443772 | 431.609302 | 12 | +367.165530 |
 | 6 | 5 | −0.653772 | −0.653772 | 1 | 0 (best at round 1, never beaten) |
 | 7 | 6 | 0.604432 | 1.364970 | 7 | +0.760538 |
 | 8 | 8 | 7.398726 | 8.606118 | 5 | +1.207392 |
 
-Progress was uneven across the eight functions. F5 was the clear success,
-climbing from about 64 to 258 at round 5, with wild round-to-round swings (down
-to 0.11) that mark a sharp peak the search kept crossing rather than settling on.
-F4 made the next largest move, from about −22 to −10. F7 jumped to its best at
-round 7, well clear of every other query, and F8 rose modestly to a high plateau
-around 8.6. F2 is worth noting: it drifted for several rounds and then broke
-upward to 0.62 at round 10, a reminder that a quiet run can still improve late.
-F6 is the honest counter-example, its best came at the very first round and
+Progress was uneven across the eight functions, and the latest round (12) was a
+strong one. F5 was the clear success, and round 12 pushed it furthest, from about
+64 up to 432, with wild round-to-round swings along the way (down to 0.11) that
+mark a sharp peak the search kept crossing rather than settling on. F4 made its
+best move in the same round, up from about −22 to −6.7. F3 also edged to a new
+best at round 12, though it stayed close to zero throughout. F7 jumped to its
+best at round 7, well clear of every other query, and F8 rose modestly to a high
+plateau around 8.6. F2 is worth noting: it drifted for several rounds and then
+broke upward to 0.62 at round 10, a reminder that a quiet run can still improve
+late. F6 is the honest counter-example, its best came at the very first round and
 nothing after it improved, so later queries effectively just confirmed that.
 Function 1 never found a real signal at all, every reading hovering around zero,
 its peak evidently too narrow for the sampling to resolve, which matches the

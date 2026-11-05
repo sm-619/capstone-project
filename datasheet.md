@@ -19,19 +19,19 @@ the author's own.
 
 Paired coordinate vectors and scalar outputs for eight functions of increasing
 dimensionality. Each function starts with a set of initial observations provided
-by the programme and gained 11 queried points over the recorded rounds, one per
+by the programme and gained 12 queried points over the recorded rounds, one per
 round:
 
 | Function | Dimensions | Initial points | Final points |
 |----------|------------|----------------|--------------|
-| 1 | 2 | 10 | 21 |
-| 2 | 2 | 10 | 21 |
-| 3 | 3 | 15 | 26 |
-| 4 | 4 | 30 | 41 |
-| 5 | 4 | 20 | 31 |
-| 6 | 5 | 20 | 31 |
-| 7 | 6 | 30 | 41 |
-| 8 | 8 | 40 | 51 |
+| 1 | 2 | 10 | 22 |
+| 2 | 2 | 10 | 22 |
+| 3 | 3 | 15 | 27 |
+| 4 | 4 | 30 | 42 |
+| 5 | 4 | 20 | 32 |
+| 6 | 5 | 20 | 32 |
+| 7 | 6 | 30 | 42 |
+| 8 | 8 | 40 | 52 |
 
 The initial observations were provided by the programme as paired NumPy arrays
 per function (`initial_inputs.npy` of shape `(N, D)` and `initial_outputs.npy` of
