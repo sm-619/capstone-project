@@ -72,3 +72,5 @@ the rounds (input vectors and returned outputs, one row per round per function).
   how the queries were collected, and its coverage limitations.
 - **[Model card](model-card.md)** — the optimisation approach, intended use, how
   the strategy evolved, the results, and its assumptions and limitations.
+- **[Reflections](reflections.md)** — round-by-round notes on the strategy and the
+  reasoning behind the query decisions.
